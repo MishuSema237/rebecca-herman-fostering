@@ -221,8 +221,8 @@ export default async function Home() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
                 <Image 
-                  src="/assets/homeHeroImage.jpg" 
-                  alt="Rebecca Herman with Cavalier"
+                  src="/assets/rebeccaFamily/rebeccainherweddingphoto.jpg" 
+                  alt="Rebecca Herman"
                   fill
                   className="object-cover"
                 />
