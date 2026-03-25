@@ -108,6 +108,13 @@ const questions: Question[] = [
         required: false
     },
     {
+        id: "pickupOrShipping",
+        question: "6. Pickup or Shipping - Would you prefer to pick up the Cavalier yourself, or would you like us to arrange professional pet transport/shipping?",
+        type: "radio",
+        options: ["I will pick up in person", "Please arrange pet transport/shipping"],
+        required: true
+    },
+    {
         id: "agreement",
         question: "I understand that this is a standard placement process and agree to provide accurate information:",
         type: "radio",
