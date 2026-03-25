@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
 import Contact from "@/models/Contact";
-import { sendMail } from "@/lib/mail";
+import { sendMail, getEmailTemplate } from "@/lib/mail";
 
 export async function POST(
     request: Request,
@@ -21,15 +21,10 @@ export async function POST(
             to: contact.email,
             subject: `Re: ${contact.subject || "Your inquiry"} - Rebecca Herman Fostering`,
             text: message,
-            html: `
-                <div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
-                    <h2 style="color: #0d9488;">Reply to your inquiry</h2>
-                    <p>Hi ${contact.name},</p>
-                    <div style="white-space: pre-wrap; line-height: 1.6; color: #333;">${message}</div>
-                    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-                    <p style="font-size: 0.8em; color: #666;">Rebecca Herman Fostering<br>vanslili265@gmail.com</p>
-                </div>
-            `,
+            html: getEmailTemplate("admin_reply", {
+                name: contact.name,
+                message: message
+            })
         });
 
         contact.status = "replied";

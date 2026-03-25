@@ -166,10 +166,10 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
-        <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f5f5f5;">
-            <table width="100%" cellpadding="0" cellspacing="0" style="background: #f5f5f5; padding: 20px;">
+        <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #ffffff;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="background: #ffffff;">
                 <tr>
-                    <td align="center" style="padding: 20px 0;">
+                    <td align="center">
                         <table width="600" cellpadding="0" cellspacing="0" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                             <tr>
                                 ${headerContent}
