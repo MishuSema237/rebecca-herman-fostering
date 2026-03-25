@@ -62,6 +62,11 @@ export const metadata: Metadata = {
         alt: "Rebecca Herman's Fostering",
       },
     ],
+    locale: "en_US",
+  },
+
+  other: {
+    "fb:app_id": "1234567890",
   },
 
   twitter: {

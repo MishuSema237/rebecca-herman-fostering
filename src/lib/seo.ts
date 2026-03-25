@@ -25,10 +25,10 @@ export const seoConfig = {
         "Cavalier rehoming",
         "Rebecca Herman Fostering",
     ],
-    socialImage: `${siteUrl}/og-image.jpg`,
-    twitterHandle: "@CavalierCommunity",
+    socialImage: `${siteUrl}/thumbnail.png`,
+    twitterHandle: "@RebeccaHerman",
     phone: "(555) 123-4567",
-    email: "rebecca@thecavaliercommunity.com",
+    email: "rebecca@rebecca-herman.com",
 };
 
 export function generatePageMetadata({
