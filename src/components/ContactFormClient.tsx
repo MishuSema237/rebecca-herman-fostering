@@ -159,7 +159,7 @@ export function ContactFormClient() {
                                         </div>
                                         <div>
                                             <p className="font-bold text-brand-forest-900">Email</p>
-                                            <p className="text-sm">admin@rebeccahermanfostering.com</p>
+                                            <p className="text-sm break-all">admin@rebeccahermanfostering.com</p>
                                         </div>
                                     </a>
                                     <a href="tel:+15043581381" className="flex items-center gap-4 text-brand-forest-600 hover:text-brand-orange-600 transition-colors">
