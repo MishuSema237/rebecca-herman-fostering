@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {
     // Define paths
     const isAdminPath = path.startsWith("/admin");
     const isLoginPath = path === "/admin/login";
-    const isApiOrStatic = path.startsWith("/api") || path.startsWith("/_next") || path.startsWith("/static") || path.includes(".") && !path.endsWith(".html");
+    const isApiOrStatic = path.startsWith("/api") || path.startsWith("/_next") || path.startsWith("/static") || (path.includes(".") && !path.endsWith(".html"));
     
     // Skip middleware for API routes, static files, and the main site pages
     if (isApiOrStatic) {
