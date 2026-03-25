@@ -391,7 +391,7 @@ export function AdoptionForm({ puppyName, puppyId, onSuccess }: AdoptionFormProp
                         </div>
                     )}
 
-                    <div className="mt-8 flex gap-4">
+                    <div className="mt-8 flex flex-col sm:flex-row gap-4">
                         {step > 0 && (
                             <Button
                                 type="button"
