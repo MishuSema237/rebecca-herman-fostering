@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rebecca-herman-fostering.vercel.app"),
+  metadataBase: new URL("https://rebeccahermanfostering.com"),
 
   title: {
     default: "Rebecca Herman's Fostering",
@@ -43,12 +43,12 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://rebecca-herman-fostering.vercel.app",
+    canonical: "https://rebeccahermanfostering.com",
   },
 
   openGraph: {
     type: "website",
-    url: "https://rebecca-herman-fostering.vercel.app",
+    url: "https://rebeccahermanfostering.com",
     title:
       "Rebecca Herman's Fostering",
     description:
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "Rebecca Herman's Fostering",
     images: [
       {
-        url: "https://rebecca-herman-fostering.vercel.app/thumbnail.png",
+        url: "https://rebeccahermanfostering.com/thumbnail.png",
         width: 1200,
         height: 630,
         alt: "Rebecca Herman's Fostering",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
       "Rebecca Herman's Fostering",
     description:
       "Find healthy, home-raised Cavalier King Charles Spaniels ready for loving families.",
-    images: ["https://rebecca-herman-fostering.vercel.app/thumbnail.png"],
+    images: ["https://rebeccahermanfostering.com/thumbnail.png"],
   },
 
   category: "Pets",

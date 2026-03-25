@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const siteUrl = process.env.NEXT_PUBLIC_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://rebecca-herman-fostering.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://rebeccahermanfostering.com";
 
 export const seoConfig = {
     siteName: "Rebecca Herman's Fostering",
