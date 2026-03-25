@@ -1,23 +1,15 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
-import { Heart, ShieldCheck, Star, PawPrint, ArrowRight, Bone, Dog, Clock, Home, Activity, ChevronLeft, ChevronRight } from "lucide-react";
+import { Heart, ShieldCheck, Star, PawPrint, ArrowRight, Bone, Dog, Clock, Home, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { generatePageMetadata } from "@/lib/seo";
+import { FamilyCarousel } from "@/components/FamilyCarousel";
 
 export const metadata: Metadata = generatePageMetadata({
     title: "About Rebecca Herman",
     description: "Learn about Rebecca Herman and her mission to find loving forever homes for Cavalier King Charles Spaniels. Our commitment to responsible breeding and adoption.",
 });
-
-const familyImages = [
-    { src: "/assets/rebeccaFamily/rebeccainherweddingphoto.jpg", alt: "Rebecca in her wedding photo" },
-    { src: "/assets/rebeccaFamily/rebeccawithahappyfamillyandanoldlady.jpg", alt: "Rebecca with a happy family and elderly lady" },
-    { src: "/assets/rebeccaFamily/rebeccaatbirthdaypartyofsomecomunitykids.jpg", alt: "Rebecca at a community event" },
-    { src: "/assets/rebeccaFamily/rebeccaandsomeladiesatapress.jpg", alt: "Rebecca with friends" },
-    { src: "/assets/rebeccaFamily/rebebeccaandherfriendstakingselfieatnight.jpg", alt: "Rebecca taking selfie with friends" },
-    { src: "/assets/rebeccaFamily/twoofrebeccasdogssleepingonchair.jpg", alt: "Rebecca's Cavaliers" },
-];
 
 export default function AboutPage() {
     return (
@@ -95,47 +87,8 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Family Images - Carousel on mobile, grid on desktop */}
-            <section className="py-16 bg-brand-forest-50">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    {/* Desktop: Grid */}
-                    <div className="hidden lg:grid grid-cols-2 lg:grid-cols-4 gap-6">
-                        {familyImages.map((img, idx) => (
-                            <div key={idx} className="aspect-[4/5] rounded-3xl overflow-hidden shadow-lg relative">
-                                <Image 
-                                    src={img.src}
-                                    alt={img.alt}
-                                    fill
-                                    className="object-cover hover:scale-105 transition-transform duration-500"
-                                />
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Mobile: Carousel */}
-                    <div className="lg:hidden">
-                        <div className="flex gap-4 overflow-x-auto snap-x pb-4 scrollbar-hide">
-                            {familyImages.map((img, idx) => (
-                                <div key={idx} className="flex-none w-[280px] snap-center">
-                                    <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-lg relative">
-                                        <Image 
-                                            src={img.src}
-                                            alt={img.alt}
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="flex justify-center gap-2 mt-4">
-                            {familyImages.map((_, idx) => (
-                                <div key={idx} className="w-2 h-2 rounded-full bg-brand-orange-300" />
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Family Images - Continuous Carousel */}
+            <FamilyCarousel />
 
             {/* My Mission */}
             <section className="py-24 bg-brand-forest-900 text-white relative overflow-hidden">

@@ -221,23 +221,11 @@ export default async function Home() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
                 <Image 
-                  src="/assets/rebeccaFamily/rebeccainherweddingphoto.jpg" 
+                  src="/assets/rebeccaFamily/rebeccawithahappyfamillyandanoldlady.jpg" 
                   alt="Rebecca Herman"
                   fill
                   className="object-cover"
                 />
-              </div>
-              {/* Pet Nanny Badge */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-2xl">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-brand-orange-100 rounded-2xl flex items-center justify-center">
-                    <Truck className="w-7 h-7 text-brand-orange-600" />
-                  </div>
-                  <div>
-                    <p className="font-black text-brand-forest-900 uppercase text-sm">Pet Nanny</p>
-                    <p className="text-brand-forest-600 text-sm">Transport Available</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
