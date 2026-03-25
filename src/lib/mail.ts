@@ -49,12 +49,10 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
     const brandColor = "#c45210";
     const brandColorLight = "#fde4d0";
     const logoText = "Rebecca Herman's Fostering";
-    const logoSubtext = "by Rebecca Herman";
-    const logoUrl = "https://rebecca-herman-fostering.vercel.app/assets/RebeccaHermanFosteringLogo.png";
+    const logoUrl = "https://rebecca-herman-fostering.vercel.app/RebeccaHermanFosteringLogo.png";
 
     let headerContent = "";
     let mainContent = "";
-    let footerContent = "";
 
     switch (type) {
         case "application_submitted":
@@ -63,6 +61,19 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
                     <img src="${logoUrl}" alt="${logoText}" style="height: 60px; margin-bottom: 15px;" />
                     <h1 style="color: white; margin: 0; font-size: 24px; font-weight: 800;">Application Received</h1>
                     <p style="color: white; opacity: 0.9; margin: 10px 0 0 0;">${logoText}</p>
+                </div>
+            `;
+            mainContent = `
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Hi${data.name ? ` ${data.name}` : ""},</p>
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Thank you for your interest in <strong>${data.puppyName || "a Cavalier"}</strong>!</p>
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Your application has been successfully submitted. Rebecca will personally review your application and get back to you within <strong>24-48 hours</strong>.</p>
+                <div style="background: ${brandColorLight}; padding: 20px; border-radius: 12px; margin: 30px 0;">
+                    <p style="margin: 0; font-size: 14px; color: #666;">While you wait, feel free to:</p>
+                    <ul style="margin: 10px 0 0 0; padding-left: 20px; font-size: 14px; color: #666;">
+                        <li>Prepare your home for your new furry family member</li>
+                        <li>Research Cavalier King Charles Spaniel care</li>
+                        <li>Gather any additional documents that may be needed</li>
+                    </ul>
                 </div>
             `;
             break;
@@ -75,6 +86,13 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
                     <p style="color: white; opacity: 0.9; margin: 10px 0 0 0;">${logoText}</p>
                 </div>
             `;
+            mainContent = `
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Hi${data.name ? ` ${data.name}` : ""},</p>
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Great news! Your application to adopt <strong>${data.puppyName || "a Cavalier"}</strong> has been <strong style="color: #22c55e;">APPROVED</strong>!</p>
+                ${data.message ? `<div style="background: #f0fdf4; padding: 20px; border-radius: 12px; margin: 20px 0; border-left: 4px solid #22c55e;"><p style="margin: 0; font-size: 15px; color: #333;">${data.message}</p></div>` : ""}
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Please reply to this email to discuss the next steps, including adoption fees and pickup/shipping arrangements.</p>
+                <p style="font-size: 16px; color: #333; margin-bottom: 0;">We look forward to welcoming your new furry family member!</p>
+            `;
             break;
 
         case "application_rejected":
@@ -85,6 +103,13 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
                     <p style="color: white; opacity: 0.9; margin: 10px 0 0 0;">${logoText}</p>
                 </div>
             `;
+            mainContent = `
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Hi${data.name ? ` ${data.name}` : ""},</p>
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Thank you for your interest in adopting from ${logoText}.</p>
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">After careful consideration, we're unable to move forward with your application at this time.</p>
+                ${data.message ? `<div style="background: #fafafa; padding: 20px; border-radius: 12px; margin: 20px 0;"><p style="margin: 0; font-size: 15px; color: #666;">${data.message}</p></div>` : ""}
+                <p style="font-size: 16px; color: #333; margin-bottom: 0;">We wish you the best in your search for the perfect companion.</p>
+            `;
             break;
 
         case "contact_submitted":
@@ -93,6 +118,13 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
                     <img src="${logoUrl}" alt="${logoText}" style="height: 60px; margin-bottom: 15px;" />
                     <h1 style="color: white; margin: 0; font-size: 24px; font-weight: 800;">Message Received</h1>
                     <p style="color: white; opacity: 0.9; margin: 10px 0 0 0;">${logoText}</p>
+                </div>
+            `;
+            mainContent = `
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Hi${data.name ? ` ${data.name}` : ""},</p>
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Thank you for reaching out! Rebecca will get back to you within <strong>24 hours</strong>.</p>
+                <div style="background: ${brandColorLight}; padding: 20px; border-radius: 12px; margin: 30px 0;">
+                    <p style="margin: 0; font-size: 14px; color: #666; font-style: italic;">"${data.message?.substring(0, 150) || "Thank you for your message..."}"</p>
                 </div>
             `;
             break;
@@ -105,10 +137,20 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
                     <p style="color: white; opacity: 0.9; margin: 10px 0 0 0;">${logoText}</p>
                 </div>
             `;
+            mainContent = `
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Hi${data.name ? ` ${data.name}` : ""},</p>
+                ${data.puppyName ? `<div style="background: ${brandColorLight}; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px;">
+                    <p style="margin: 0; font-size: 13px; color: ${brandColor}; font-weight: 600;">Regarding: ${data.puppyName}</p>
+                </div>` : ""}
+                <div style="background: #f8f8f8; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 4px solid ${brandColor};">
+                    <p style="margin: 0; font-size: 15px; color: #333; line-height: 1.6;">${data.message}</p>
+                </div>
+                <p style="font-size: 14px; color: #999; margin-bottom: 0;">Best regards,<br/>Rebecca Herman<br/>${logoText}</p>
+            `;
             break;
     }
 
-    footerContent = `
+    const footerContent = `
         <div style="background: #f5f5f5; padding: 30px; text-align: center;">
             <p style="margin: 0; font-size: 13px; color: #999;">
                 © ${new Date().getFullYear()} ${logoText}. All rights reserved.<br/>
