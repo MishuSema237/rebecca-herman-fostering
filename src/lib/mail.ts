@@ -49,7 +49,7 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
     const brandColor = "#c45210";
     const brandColorLight = "#fde4d0";
     const logoText = "Rebecca Herman's Fostering";
-    const logoUrl = "https://rebecca-herman-fostering.vercel.app/RebeccaHermanFosteringLogo.png";
+    const logoUrl = "https://rebecca-herman-fostering.vercel.app/RebeccaHermanFosteringLogo.svg";
 
     let headerContent = "";
     let mainContent = "";
