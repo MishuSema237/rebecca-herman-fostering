@@ -202,7 +202,7 @@ export function PuppyForm({ initialData, onSuccess, onCancel }: PuppyFormProps) 
                     {/* Physical Details */}
                     <div className="pt-4 border-t border-brand-white-400">
                         <h4 className="text-sm font-black uppercase text-brand-orange-700 mb-4">Physical Details</h4>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="space-y-2">
                                 <Label htmlFor="currentWeight" className="text-[10px] font-black uppercase tracking-widest text-brand-white-900">Current Weight</Label>
                                 <Input id="currentWeight" value={formData.currentWeight} onChange={handleChange} className="rounded-xl border-brand-white-400 h-11" placeholder="e.g. 5.5 - 7 kg" />
