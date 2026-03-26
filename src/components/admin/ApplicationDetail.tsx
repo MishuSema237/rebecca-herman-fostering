@@ -26,6 +26,7 @@ const questionLabels: Record<string, string> = {
     readinessExplanation: "Readiness Explanation",
     veterinarian: "Has Veterinarian",
     vetDetails: "Veterinarian Details",
+    pickupOrShipping: "Pickup or Shipping",
     agreement: "Agreement"
 };
 

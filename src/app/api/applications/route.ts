@@ -29,7 +29,7 @@ export async function POST(request: Request) {
             "homeLifestyle", "canineExperience", "currentPets", "currentPetsDetails",
             "hoursAlone", "careArrangement", "livingEnvironment", "livingEnvironmentOther",
             "outdoorSpace", "outdoorSpaceDetails", "readinessScore", "readinessExplanation",
-            "veterinarian", "vetDetails", "agreement"
+            "veterinarian", "vetDetails", "pickupOrShipping", "agreement"
         ];
         
         questionFields.forEach(field => {
@@ -68,10 +68,31 @@ export async function POST(request: Request) {
 
         // Send notification to admin
         const adminEmail = process.env.ADMIN_EMAIL || "admin@rebeccahermanfostering.com";
+        
+        const labels: Record<string, string> = {
+            homeLifestyle: "Home & Lifestyle",
+            canineExperience: "Canine Experience",
+            currentPets: "Current Pets",
+            currentPetsDetails: "Current Pets Details",
+            hoursAlone: "Hours Alone Per Day",
+            careArrangement: "Care Arrangement",
+            livingEnvironment: "Living Environment",
+            livingEnvironmentOther: "Living Environment (Other)",
+            outdoorSpace: "Outdoor Space",
+            outdoorSpaceDetails: "Outdoor Space Details",
+            readinessScore: "Readiness Score (1-100)",
+            readinessExplanation: "Readiness Explanation",
+            veterinarian: "Has Veterinarian",
+            vetDetails: "Veterinarian Details",
+            pickupOrShipping: "Pickup or Shipping",
+            agreement: "Agreement"
+        };
+        
         let answersHtml = "";
         Object.entries(answers).forEach(([key, value]) => {
             if (value) {
-                answersHtml += `<p style="margin: 10px 0; padding: 10px; background: #f9fafb; border-radius: 6px;"><strong>${key}:</strong> ${value}</p>`;
+                const label = labels[key] || key;
+                answersHtml += `<p style="margin: 10px 0; padding: 10px; background: #f9fafb; border-radius: 6px;"><strong>${label}:</strong> ${value}</p>`;
             }
         });
 
