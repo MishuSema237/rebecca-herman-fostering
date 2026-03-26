@@ -7,6 +7,9 @@ export interface IApplication extends Document {
     email: string;
     phone: string;
     location: string;
+    nearestAirport: string;
+    deliveryOption: string;
+    arrivalAvailability: string;
     answers: Record<string, any>;
     status: "new" | "reviewed" | "approved" | "rejected";
     adminNotes: string;
@@ -21,6 +24,9 @@ const ApplicationSchema: Schema = new Schema(
         email: { type: String, required: true },
         phone: { type: String, required: true },
         location: { type: String, required: true },
+        nearestAirport: { type: String, default: "" },
+        deliveryOption: { type: String, default: "" },
+        arrivalAvailability: { type: String, default: "" },
         answers: { type: Schema.Types.Mixed, default: {} },
         status: {
             type: String,

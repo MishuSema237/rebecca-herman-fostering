@@ -29,7 +29,8 @@ export async function POST(request: Request) {
             "homeLifestyle", "canineExperience", "currentPets", "currentPetsDetails",
             "hoursAlone", "careArrangement", "livingEnvironment", "livingEnvironmentOther",
             "outdoorSpace", "outdoorSpaceDetails", "readinessScore", "readinessExplanation",
-            "veterinarian", "vetDetails", "pickupOrShipping", "agreement"
+            "veterinarian", "vetDetails", "pickupOrShipping", "agreement",
+            "nearestAirport", "deliveryOption", "arrivalAvailability"
         ];
         
         questionFields.forEach(field => {
@@ -45,6 +46,9 @@ export async function POST(request: Request) {
             email: body.email,
             phone: body.phone,
             location: body.location,
+            nearestAirport: body.nearestAirport || "",
+            deliveryOption: body.deliveryOption || "",
+            arrivalAvailability: body.arrivalAvailability || "",
             answers,
             status: "new"
         };
@@ -85,7 +89,10 @@ export async function POST(request: Request) {
             veterinarian: "Has Veterinarian",
             vetDetails: "Veterinarian Details",
             pickupOrShipping: "Pickup or Shipping",
-            agreement: "Agreement"
+            agreement: "Agreement",
+            nearestAirport: "Nearest Major Airport",
+            deliveryOption: "Preferred Delivery Option",
+            arrivalAvailability: "Day of Arrival Availability"
         };
         
         let answersHtml = "";
@@ -109,7 +116,10 @@ export async function POST(request: Request) {
                             <p><strong>Name:</strong> ${application.applicantName}</p>
                             <p><strong>Email:</strong> ${application.email}</p>
                             <p><strong>Phone:</strong> ${application.phone}</p>
-                            <p><strong>Location:</strong> ${application.location}</p>
+                            <p><strong>Address:</strong> ${application.location}</p>
+                            <p><strong>Nearest Airport:</strong> ${application.nearestAirport || "N/A"}</p>
+                            <p><strong>Delivery Option:</strong> ${application.deliveryOption || "N/A"}</p>
+                            <p><strong>Day of Arrival Availability:</strong> ${application.arrivalAvailability || "N/A"}</p>
                             <p><strong>Puppy:</strong> ${application.puppyName}</p>
                         </div>
                         <h3>Application Answers</h3>

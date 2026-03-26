@@ -112,6 +112,23 @@ export function ApplicationDetail({ application, onBack, onUpdate }: Application
                     <p className="text-brand-forest-600">{application.email}</p>
                     <p className="text-brand-forest-500 text-sm">{application.phone}</p>
                     <p className="text-brand-forest-500 text-sm">{application.location}</p>
+                    
+                    {/* Delivery Details */}
+                    {(application.nearestAirport || application.deliveryOption || application.arrivalAvailability) && (
+                        <div className="mt-4 p-4 bg-brand-orange-50 rounded-xl border border-brand-orange-200">
+                            <p className="text-xs font-black text-brand-orange-700 uppercase mb-2">Delivery Details</p>
+                            {application.nearestAirport && (
+                                <p className="text-sm text-brand-forest-700"><span className="font-bold">Nearest Airport:</span> {application.nearestAirport}</p>
+                            )}
+                            {application.deliveryOption && (
+                                <p className="text-sm text-brand-forest-700"><span className="font-bold">Delivery Option:</span> {application.deliveryOption}</p>
+                            )}
+                            {application.arrivalAvailability && (
+                                <p className="text-sm text-brand-forest-700"><span className="font-bold">Day of Arrival:</span> {application.arrivalAvailability}</p>
+                            )}
+                        </div>
+                    )}
+                    
                     {application.puppyName && (
                         <p className="text-brand-orange-700 font-bold mt-2">Cavalier: {application.puppyName}</p>
                     )}
