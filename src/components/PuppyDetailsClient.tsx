@@ -23,7 +23,6 @@ interface PuppyDetailsClientProps {
         fee: string;
         nannyFee: string;
         description: string;
-        story: string;
         whyRehoming?: string;
         whatDogNeeds?: string;
         currentWeight?: string;
@@ -206,18 +205,13 @@ export function PuppyDetailsClient({ puppy, relatedPuppies }: PuppyDetailsClient
                             <h3 className="text-xl sm:text-2xl font-black text-brand-forest-900 mb-4 uppercase">About {puppy.name}</h3>
                             <p className="text-brand-forest-600 text-base sm:text-lg leading-relaxed italic mb-8">{puppy.description}</p>
 
-                            <h3 className="text-xl sm:text-2xl font-black text-brand-orange-600 mb-4 uppercase">Why Rehoming?</h3>
-                            <div className="bg-brand-orange-50 p-6 sm:p-8 rounded-3xl border border-brand-orange-200 relative mb-6">
-                                <Heart className="w-6 h-6 text-brand-orange-600 absolute -top-3 -left-3 bg-white rounded-full p-1 shadow-md" />
-                                <p className="text-brand-forest-700 text-base sm:text-lg italic leading-relaxed">{puppy.story}</p>
-                            </div>
-
-                            {/* Detailed Why Rehoming */}
-                            {puppy.whyRehoming && (
+                            {/* Why Rehoming */}
+                            {(puppy.whyRehoming || puppy.story) && (
                                 <>
                                     <h3 className="text-xl sm:text-2xl font-black text-brand-orange-600 mb-4 uppercase">Why {puppy.name} Is Looking for a New Home</h3>
-                                    <div className="bg-brand-forest-50 p-6 sm:p-8 rounded-3xl border border-brand-forest-200 mb-6">
-                                        <p className="text-brand-forest-700 text-base sm:text-lg leading-relaxed whitespace-pre-line">{puppy.whyRehoming}</p>
+                                    <div className="bg-brand-orange-50 p-6 sm:p-8 rounded-3xl border border-brand-orange-200 relative mb-6">
+                                        <Heart className="w-6 h-6 text-brand-orange-600 absolute -top-3 -left-3 bg-white rounded-full p-1 shadow-md" />
+                                        <p className="text-brand-forest-700 text-base sm:text-lg leading-relaxed whitespace-pre-line">{puppy.whyRehoming || puppy.story}</p>
                                     </div>
                                 </>
                             )}

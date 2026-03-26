@@ -12,7 +12,7 @@ export interface IPuppy extends Document {
     fee: string;
     nannyFee: string;
     description: string;
-    story: string;
+    whyRehoming: string;
     whyRehoming: string;
     whatDogNeeds: string;
     currentWeight: string;
@@ -44,7 +44,7 @@ const PuppySchema: Schema = new Schema(
         fee: { type: String, default: "" },
         nannyFee: { type: String, default: "" },
         description: { type: String, default: "" },
-        story: { type: String, default: "" },
+        whyRehoming: { type: String, default: "" },
         whyRehoming: { type: String, default: "" },
         whatDogNeeds: { type: String, default: "" },
         currentWeight: { type: String, default: "" },

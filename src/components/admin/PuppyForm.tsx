@@ -190,11 +190,6 @@ export function PuppyForm({ initialData, onSuccess, onCancel }: PuppyFormProps) 
                     </div>
 
                     <div className="space-y-2">
-                        <Label htmlFor="story" className="text-[10px] font-black uppercase tracking-widest text-brand-white-900">Rehoming Story</Label>
-                        <Textarea id="story" value={formData.story} onChange={handleChange} className="rounded-2xl border-brand-white-400 min-h-[100px] py-3" placeholder="Why is this puppy being rehomed?" />
-                    </div>
-
-                    <div className="space-y-2">
                         <Label htmlFor="location" className="text-[10px] font-black uppercase tracking-widest text-brand-white-900">Location (City, State)</Label>
                         <Input id="location" value={formData.location} onChange={handleChange} className="rounded-xl border-brand-white-400 h-11" placeholder="e.g. Helltown, Ohio" />
                     </div>
