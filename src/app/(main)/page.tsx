@@ -185,14 +185,18 @@ export default async function Home() {
       {/* About Us Section */}
       <section className="py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0">
-          <Image 
-            src="/thumbnail.png" 
-            alt="Cavalier King Charles Rehoming Center"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-forest-900/90 via-brand-forest-900/80 to-brand-forest-900/60" />
+          {/* Left side green overlay that fades to right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-forest-900 via-brand-forest-900/70 to-transparent lg:w-2/3" />
+          {/* Image on the right */}
+          <div className="absolute right-0 top-0 bottom-0 w-full lg:w-2/3">
+            <Image 
+              src="/thumbnail.png" 
+              alt="Cavalier King Charles Rehoming Center"
+              fill
+              className="object-cover object-left"
+              priority
+            />
+          </div>
         </div>
         
         {/* Background decorative elements */}
@@ -212,33 +216,30 @@ export default async function Home() {
         </div>
         
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              
-              <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-6">
-                Connecting Families with <span className="text-brand-orange-500">Cavalier Love</span>
-              </h2>
-              <div className="space-y-4 text-white/70">
-                <p className="text-lg leading-relaxed">
-                  We are a dedicated team passionate about finding loving forever homes for Cavalier King Charles Spaniels. Our mission is to ensure every Cavalier finds their perfect family.
-                </p>
-                <p className="text-lg leading-relaxed">
-                  With years of experience in Cavalier rehoming, we understand the unique needs of this wonderful breed and work tirelessly to match puppies with the right families.
-                </p>
-                <p className="text-lg leading-relaxed">
-                  Every Cavalier in our care receives the highest quality of love, care, and attention. We conduct thorough assessments to ensure successful adoptions.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Link href="/about" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-orange-700 text-white font-black uppercase tracking-wider rounded-full hover:bg-brand-orange-800 transition-all">
-                  Learn More About Us
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-bold uppercase tracking-wider rounded-full hover:bg-white/10 transition-all">
-                  Get in Touch
-                </Link>
-              </div>
+          <div className="max-w-2xl">
+            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-6">
+              Connecting Families with <span className="text-brand-orange-500">Cavalier Love</span>
+            </h2>
+            <div className="space-y-4 text-white/70">
+              <p className="text-lg leading-relaxed">
+                We are a dedicated team passionate about finding loving forever homes for Cavalier King Charles Spaniels. Our mission is to ensure every Cavalier finds their perfect family.
+              </p>
+              <p className="text-lg leading-relaxed">
+                With years of experience in Cavalier rehoming, we understand the unique needs of this wonderful breed and work tirelessly to match puppies with the right families.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Every Cavalier in our care receives the highest quality of love, care, and attention. We conduct thorough assessments to ensure successful adoptions.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <Link href="/about" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-orange-700 text-white font-black uppercase tracking-wider rounded-full hover:bg-brand-orange-800 transition-all">
+                Learn More About Us
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-bold uppercase tracking-wider rounded-full hover:bg-white/10 transition-all">
+                Get in Touch
+              </Link>
             </div>
           </div>
         </div>
