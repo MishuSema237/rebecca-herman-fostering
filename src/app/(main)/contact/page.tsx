@@ -9,7 +9,7 @@ import { generatePageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = generatePageMetadata({
     title: "Contact Us",
-    description: "Get in touch with Rebecca Herman. Contact us about Cavalier King Charles Spaniel adoption, questions, or to schedule a visit. We're here to help!",
+    description: "Get in touch with Cavalier King Charles Rehoming Center. Contact us about Cavalier King Charles Spaniel adoption, questions, or to schedule a visit. We're here to help!",
 });
 
 export default function ContactPage() {
@@ -29,7 +29,7 @@ export default function ContactPage() {
                     <h1 className="text-4xl sm:text-6xl font-black text-white uppercase tracking-tight mb-4">
                         Get in <span className="text-brand-orange-500">Touch</span>
                     </h1>
-                    <p className="text-xl text-white/60">I'd love to hear from you</p>
+                    <p className="text-xl text-white/60">We'd love to hear from you</p>
                 </div>
             </section>
 

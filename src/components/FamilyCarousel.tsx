@@ -10,12 +10,12 @@ interface FamilyImage {
 }
 
 const familyImages: FamilyImage[] = [
-    { src: "/assets/rebeccaFamily/rebeccainherweddingphoto.jpg", alt: "Rebecca in her wedding photo" },
-    { src: "/assets/rebeccaFamily/rebeccawithahappyfamillyandanoldlady.jpg", alt: "Rebecca with a happy family and elderly lady" },
-    { src: "/assets/rebeccaFamily/rebeccaatbirthdaypartyofsomecomunitykids.jpg", alt: "Rebecca at a community event" },
-    { src: "/assets/rebeccaFamily/rebeccaandsomeladiesatapress.jpg", alt: "Rebecca with friends" },
-    { src: "/assets/rebeccaFamily/rebebeccaandherfriendstakingselfieatnight.jpg", alt: "Rebecca taking selfie with friends" },
-    { src: "/assets/rebeccaFamily/twoofrebeccasdogssleepingonchair.jpg", alt: "Rebecca's Cavaliers" },
+    { src: "/assets/rebeccaFamily/rebeccainherweddingphoto.jpg", alt: "Our community" },
+    { src: "/assets/rebeccaFamily/rebeccawithahappyfamillyandanoldlady.jpg", alt: "Happy families with their Cavaliers" },
+    { src: "/assets/rebeccaFamily/rebeccaatbirthdaypartyofsomecomunitykids.jpg", alt: "Community events" },
+    { src: "/assets/rebeccaFamily/rebeccaandsomeladiesatapress.jpg", alt: "Our team" },
+    { src: "/assets/rebeccaFamily/rebebeccaandherfriendstakingselfieatnight.jpg", alt: "Cavalier lovers" },
+    { src: "/assets/rebeccaFamily/twoofrebeccasdogssleepingonchair.jpg", alt: "Our Cavaliers" },
 ];
 
 export function FamilyCarousel() {

@@ -3,11 +3,11 @@ import { Metadata } from "next";
 const siteUrl = process.env.NEXT_PUBLIC_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://rebeccahermanfostering.com";
 
 export const seoConfig = {
-    siteName: "Rebecca Herman's Fostering",
-    siteNameShort: "Rebecca Herman's Fostering",
-    ownerName: "Rebecca Herman",
+    siteName: "Cavalier King Charles Rehoming Center",
+    siteNameShort: "CKC Rehoming Center",
+    ownerName: "Cavalier King Charles Rehoming Center",
     tagline: "Finding Loving Forever Homes for Cavalier King Charles Spaniels",
-    description: "Rebecca Herman's Fostering specializes in finding loving forever homes for Cavalier King Charles Spaniel puppies. Responsible adoption with health guarantees.",
+    description: "Cavalier King Charles Rehoming Center specializes in finding loving forever homes for Cavalier King Charles Spaniel puppies. Responsible adoption with health guarantees.",
     keywords: [
         "Cavalier King Charles Spaniel",
         "Cavalier King Charles Spaniel adoption",
@@ -23,10 +23,10 @@ export const seoConfig = {
         "Cavalier Spaniel",
         "Cavalier adoption",
         "Cavalier rehoming",
-        "Rebecca Herman Fostering",
+        "Cavalier King Charles Rehoming Center",
     ],
     socialImage: `${siteUrl}/thumbnail.png`,
-    twitterHandle: "@RebeccaHerman",
+    twitterHandle: "@CKCRehoming",
     phone: "+1 (504) 358-1381",
     email: "admin@rebeccahermanfostering.com",
 };

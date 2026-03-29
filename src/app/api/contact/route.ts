@@ -49,8 +49,8 @@ export async function POST(request: Request) {
 
         await sendMail({
             to: email,
-            subject: `Thank You for Reaching Out | Rebecca Herman Fostering`,
-            text: `Hi ${name},\n\nThank you for contacting Rebecca Herman's Fostering! Rebecca will get back to you within 24 hours.\n\nBest regards,\nRebecca Herman`,
+            subject: `Thank You for Reaching Out | Cavalier King Charles Rehoming Center`,
+            text: `Hi ${name},\n\nThank you for contacting Cavalier King Charles Rehoming Center! We will get back to you within 24 hours.\n\nBest regards,\nCavalier King Charles Rehoming Center`,
             html: getEmailTemplate("contact_submitted", {
                 name,
                 message

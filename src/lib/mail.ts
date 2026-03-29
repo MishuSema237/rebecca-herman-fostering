@@ -25,7 +25,7 @@ export async function sendMail({ to, subject, text, html, replyTo }: MailOptions
 
     try {
         const info = await transporter.sendMail({
-            from: `"Rebecca Herman" <${process.env.SMTP_USER}>`,
+            from: `"Cavalier King Charles Rehoming Center" <${process.env.SMTP_USER}>`,
             to,
             subject,
             text,
@@ -48,7 +48,7 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
 }) {
     const brandColor = "#c45210";
     const brandColorLight = "#fde4d0";
-    const logoText = "Rebecca Herman's Fostering";
+    const logoText = "Cavalier King Charles Rehoming Center";
     const logoUrl = "https://rebeccahermanfostering.com/RebeccaHermanFosteringLogo.png";
 
     let headerContent = "";
@@ -66,7 +66,7 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
             mainContent = `
                 <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Hi${data.name ? ` ${data.name}` : ""},</p>
                 <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Thank you for your interest in <strong>${data.puppyName || "a Cavalier"}</strong>!</p>
-                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Your application has been successfully submitted. Rebecca will personally review your application and get back to you within <strong>24-48 hours</strong>.</p>
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Your application has been successfully submitted. Our team will personally review your application and get back to you within <strong>24-48 hours</strong>.</p>
                 <div style="background: ${brandColorLight}; padding: 20px; border-radius: 12px; margin: 30px 0;">
                     <p style="margin: 0; font-size: 14px; color: #666;">While you wait, feel free to:</p>
                     <ul style="margin: 10px 0 0 0; padding-left: 20px; font-size: 14px; color: #666;">
@@ -122,7 +122,7 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
             `;
             mainContent = `
                 <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Hi${data.name ? ` ${data.name}` : ""},</p>
-                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Thank you for reaching out! Rebecca will get back to you within <strong>24 hours</strong>.</p>
+                <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Thank you for reaching out! We will get back to you within <strong>24 hours</strong>.</p>
                 <div style="background: ${brandColorLight}; padding: 20px; border-radius: 12px; margin: 30px 0;">
                     <p style="margin: 0; font-size: 14px; color: #666; font-style: italic;">"${data.message?.substring(0, 150) || "Thank you for your message..."}"</p>
                 </div>
@@ -145,7 +145,7 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
                 <div style="background: #f8f8f8; padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 4px solid ${brandColor};">
                     <p style="margin: 0; font-size: 15px; color: #333; line-height: 1.6;">${data.message}</p>
                 </div>
-                <p style="font-size: 14px; color: #999; margin-bottom: 0;">Best regards,<br/>Rebecca Herman<br/>${logoText}</p>
+                <p style="font-size: 14px; color: #999; margin-bottom: 0;">Best regards,<br/>The Team<br/>${logoText}</p>
             `;
             break;
     }

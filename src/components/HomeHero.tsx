@@ -12,7 +12,7 @@ export function HomeHero() {
             <div className="absolute inset-0">
                 <Image
                     src="/assets/homeHeroImage.jpg"
-                    alt="Rebecca Herman with Cavalier"
+                    alt="Cavalier King Charles Rehoming Center"
                     fill
                     className="object-cover"
                     priority
@@ -55,7 +55,7 @@ export function HomeHero() {
                             Connecting Families with Cavalier Love
                         </p>
                         <p className="text-white/60 mb-4 max-w-xl mx-auto">
-                            I'm Rebecca Herman, a 34-year-old wife, mother of four, and passionate dog lover.
+                            We are a dedicated team passionate about finding loving forever homes for Cavalier King Charles Spaniels.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -71,7 +71,7 @@ export function HomeHero() {
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-bold uppercase tracking-wider rounded-full hover:bg-white/10 transition-all"
                             >
                                 <Bone className="w-4 h-4" />
-                                My Story
+                                Our Story
                             </Link>
                         </div>
 

@@ -79,7 +79,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                                 <X className="w-6 h-6" />
                             </button>
                         </div>
-                        <p className="text-white/60 text-sm mt-1">Rebecca Herman</p>
+                        <p className="text-white/60 text-sm mt-1">Cavalier King Charles Rehoming Center</p>
                     </div>
 
                     {/* Navigation - Scrollable */}

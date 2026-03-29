@@ -59,8 +59,8 @@ export async function POST(request: Request) {
         try {
             await sendMail({
                 to: application.email,
-                subject: `Application Submitted - ${application.puppyName} | Rebecca Herman`,
-                text: `Thank you for your application! Rebecca will review it within 24-48 hours.`,
+                subject: `Application Submitted - ${application.puppyName} | Cavalier King Charles Rehoming Center`,
+                text: `Thank you for your application! Our team will review it within 24-48 hours.`,
                 html: getEmailTemplate("application_submitted", {
                     name: application.applicantName,
                     puppyName: application.puppyName

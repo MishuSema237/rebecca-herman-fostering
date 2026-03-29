@@ -7,8 +7,8 @@ import { generatePageMetadata } from "@/lib/seo";
 import { FamilyCarousel } from "@/components/FamilyCarousel";
 
 export const metadata: Metadata = generatePageMetadata({
-    title: "About Rebecca Herman",
-    description: "Learn about Rebecca Herman and her mission to find loving forever homes for Cavalier King Charles Spaniels. Our commitment to responsible breeding and adoption.",
+    title: "About Us",
+    description: "Learn about Cavalier King Charles Rehoming Center and our mission to find loving forever homes for Cavalier King Charles Spaniels. Our commitment to responsible adoption.",
 });
 
 export default function AboutPage() {
@@ -29,10 +29,10 @@ export default function AboutPage() {
 
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                     <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight mb-6">
-                        About <span className="text-brand-orange-500">Rebecca</span>
+                        About <span className="text-brand-orange-500">Us</span>
                     </h1>
                     <p className="text-xl text-white/60 max-w-2xl mx-auto">
-                        The founder of Rebecca Herman's Fostering
+                        Cavalier King Charles Rehoming Center
                     </p>
                 </div>
             </section>
@@ -61,26 +61,26 @@ export default function AboutPage() {
                         
                         <div className="order-1 lg:order-2">
                             <h2 className="text-3xl sm:text-5xl font-black text-brand-forest-900 uppercase tracking-tight mb-8">
-                                My <span className="text-brand-orange-600">Journey</span>
+                                Our <span className="text-brand-orange-600">Story</span>
                             </h2>
                             
                             <div className="space-y-6 text-brand-forest-700 text-lg leading-relaxed">
                                 <p>
-                                    I'm Rebecca Herman, a 34-year-old wife, mother of four, and passionate dog lover. My connection with dogs—especially Cavalier King Charles Spaniels—began in childhood.
+                                    We are a dedicated team passionate about finding loving forever homes for Cavalier King Charles Spaniels. Our journey began with a simple belief: every Cavalier deserves a caring family.
                                 </p>
                                 <p>
-                                    Although my early experiences weren't ideal, they shaped a deep personal promise within me: to always love, protect, and advocate for dogs, and to support anyone who shares that same compassion.
+                                    Our team brings together years of experience in Cavalier care and rehoming. We understand the unique needs of this wonderful breed and work tirelessly to ensure successful adoptions.
                                 </p>
                                 <p>
-                                    Over the years, I became increasingly aware of the heartbreaking number of dogs in shelters, often surrendered for reasons beyond their control. Seeing this inspired me to take action and make a difference.
+                                    We believe in transparent, ethical rehoming practices. Every Cavalier in our care receives the highest quality of love, attention, and veterinary care.
                                 </p>
                             </div>
 
                             <div className="mt-10 p-8 bg-brand-forest-50 rounded-[2rem] border-l-4 border-brand-orange-600">
                                 <p className="text-xl font-serif italic text-brand-forest-800">
-                                    "Every family I help find their perfect Cavalier becomes part of my extended family. Watching these beautiful dogs bring joy to homes across the country is what makes this work so meaningful."
+                                    "Every family we help find their perfect Cavalier becomes part of our extended family. Watching these beautiful dogs bring joy to homes across the country is what makes this work so meaningful."
                                 </p>
-                                <p className="mt-4 font-black text-brand-orange-700">— Rebecca Herman</p>
+                                <p className="mt-4 font-black text-brand-orange-700">— The Team</p>
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-4">
-                            My <span className="text-brand-orange-500">Mission</span>
+                            Our <span className="text-brand-orange-500">Mission</span>
                         </h2>
                         <p className="text-white/60 max-w-2xl mx-auto">Creating meaningful connections between Cavaliers and loving families.</p>
                     </div>
@@ -117,14 +117,14 @@ export default function AboutPage() {
                             <ShieldCheck className="w-12 h-12 text-brand-orange-500 mb-4" />
                             <h3 className="text-xl font-black uppercase mb-3">Trusted Intermediary</h3>
                             <p className="text-white/70">
-                                My role is to act as a trusted intermediary—ensuring every rehoming process is handled with care, transparency, and the best interests of the dogs at heart.
+                                Our role is to act as a trusted intermediary—ensuring every rehoming process is handled with care, transparency, and the best interests of the dogs at heart.
                             </p>
                         </div>
                     </div>
 
                     <div className="mt-12 text-center">
                         <p className="text-2xl font-serif italic text-white/80 max-w-3xl mx-auto">
-                            "For me, this is more than just a platform—it's a commitment to giving every dog the second chance they deserve and helping loving homes find the perfect companion."
+                            "For us, this is more than just a platform—it's a commitment to giving every dog the second chance they deserve and helping loving homes find the perfect companion."
                         </p>
                     </div>
                 </div>
@@ -137,7 +137,7 @@ export default function AboutPage() {
                         <h2 className="text-3xl sm:text-5xl font-black text-brand-forest-900 uppercase tracking-tight">
                             The <span className="text-brand-orange-600">Cavalier</span>
                         </h2>
-                        <p className="text-brand-forest-600 mt-2">Why I specialize in these magnificent dogs</p>
+                        <p className="text-brand-forest-600 mt-2">Why we specialize in these magnificent dogs</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -312,7 +312,7 @@ export default function AboutPage() {
                         <br /><span className="text-brand-orange-600">Perfect Match</span>
                     </h2>
                     <p className="text-xl text-brand-forest-600 mb-10">
-                        I'd love to help you find your new best friend.
+                        We'd love to help you find your new best friend.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href="/puppies" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-orange-700 text-white font-black uppercase tracking-wider rounded-full hover:bg-brand-orange-800 transition-all">

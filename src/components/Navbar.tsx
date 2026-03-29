@@ -77,7 +77,7 @@ export function Navbar() {
                         <div className="relative w-36 h-12">
                             <Image 
                                 src="/assets/RebeccaHermanFosteringLogo.png" 
-                                alt="Rebecca Herman's Fostering"
+                                alt="Cavalier King Charles Rehoming Center"
                                 fill
                                 className="object-contain"
                             />

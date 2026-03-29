@@ -219,7 +219,7 @@ export function AdoptionForm({ puppyName, puppyId, onSuccess }: AdoptionFormProp
                 </div>
                 <h3 className="text-2xl font-black text-brand-forest-900 mb-4 uppercase">Application Submitted!</h3>
                 <p className="text-brand-forest-700 mb-6 leading-relaxed">
-                    Thank you for your interest in <strong>{puppyName}</strong>. Rebecca will personally review your application and get back to you within 24-48 hours.
+                    Thank you for your interest in <strong>{puppyName}</strong>. Our team will personally review your application and get back to you within 24-48 hours.
                 </p>
                 <p className="text-sm text-brand-forest-500">
                     You will receive a confirmation email shortly.

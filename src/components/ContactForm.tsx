@@ -82,11 +82,11 @@ export function ContactForm() {
 
                         <div className="bg-brand-forest-900 rounded-3xl p-8 text-white">
                             <Heart className="w-10 h-10 text-brand-orange-500 mb-4" />
-                            <h3 className="text-lg font-black uppercase mb-2">My Promise</h3>
+                            <h3 className="text-lg font-black uppercase mb-2">Our Promise</h3>
                             <p className="text-white/70 font-medium italic">
-                                "Finding the perfect home for every puppy is not just my job, it's my promise to every family I work with."
+                                "Finding the perfect home for every puppy is not just our job, it's our promise to every family we work with."
                             </p>
-                            <p className="mt-4 font-black text-brand-orange-500">— Rebecca Herman</p>
+                            <p className="mt-4 font-black text-brand-orange-500">— The Team</p>
                         </div>
                     </div>
 
@@ -105,7 +105,7 @@ export function ContactForm() {
                                     </div>
                                     <h2 className="text-3xl font-black text-brand-forest-900 mb-4 uppercase">Message Sent!</h2>
                                     <p className="text-brand-forest-600 mb-8 max-w-md">
-                                        Thank you for reaching out. Rebecca will get back to you within 24 hours.
+                                        Thank you for reaching out. We will get back to you within 24 hours.
                                     </p>
                                     <Button
                                         onClick={() => setSubmitted(false)}

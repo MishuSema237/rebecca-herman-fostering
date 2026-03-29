@@ -97,7 +97,7 @@ export function ContactList({ contacts, onUpdate }: { contacts: Contact[], onUpd
                                 <Textarea
                                     value={replyMessage}
                                     onChange={(e) => setReplyMessage(e.target.value)}
-                                    placeholder="Type your message to Rebecca's potential collector..."
+                                    placeholder="Type your message to the potential adopter..."
                                     className="rounded-2xl border-brand-white-400 min-h-[150px] p-5 bg-white shadow-inner focus:ring-brand-forest-300"
                                 />
                                 <div className="flex justify-end gap-3">
@@ -118,7 +118,7 @@ export function ContactList({ contacts, onUpdate }: { contacts: Contact[], onUpd
                 <div className="text-center py-20 bg-white rounded-3xl border-2 border-dashed border-brand-white-400 shadow-inner">
                     <Mail className="w-12 h-12 text-brand-white-400 mx-auto mb-4" />
                     <h3 className="text-xl font-bold text-brand-forest-700">No messages yet</h3>
-                    <p className="text-brand-white-900 mt-2">When people contact Rebecca, their messages will appear here.</p>
+                    <p className="text-brand-white-900 mt-2">When people contact us, their messages will appear here.</p>
                 </div>
             )}
         </div>

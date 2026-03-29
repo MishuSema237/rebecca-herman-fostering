@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rebeccahermanfostering.com"),
 
   title: {
-    default: "Rebecca Herman's Fostering",
-    template: "%s | Rebecca Herman's Fostering",
+    default: "Cavalier King Charles Rehoming Center",
+    template: "%s | Cavalier King Charles Rehoming Center",
   },
 
   description:
@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     "Cavalier King Charles Spaniel rehoming",
     " Cavalier King Charles Spaniel puppies",
     "family puppies",
-    "Rebecca Herman"
+    "Cavalier King Charles Rehoming Center"
   ],
 
-  authors: [{ name: "Rebecca Herman" }],
-  creator: "Rebecca Herman",
-  publisher: "Rebecca Herman's Fostering",
+  authors: [{ name: "Cavalier King Charles Rehoming Center" }],
+  creator: "Cavalier King Charles Rehoming Center",
+  publisher: "Cavalier King Charles Rehoming Center",
 
   robots: {
     index: true,
@@ -50,16 +50,16 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://rebeccahermanfostering.com",
     title:
-      "Rebecca Herman's Fostering",
+      "Cavalier King Charles Rehoming Center",
     description:
       "Healthy, vet-checked Cavalier King Charles Spaniels raised with care and ready for loving homes.",
-    siteName: "Rebecca Herman's Fostering",
+    siteName: "Cavalier King Charles Rehoming Center",
     images: [
       {
         url: "https://rebeccahermanfostering.com/thumbnail.png",
         width: 1200,
         height: 630,
-        alt: "Rebecca Herman's Fostering",
+        alt: "Cavalier King Charles Rehoming Center",
       },
     ],
     locale: "en_US",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Rebecca Herman's Fostering",
+      "Cavalier King Charles Rehoming Center",
     description:
       "Find healthy, home-raised Cavalier King Charles Spaniels ready for loving families.",
     images: ["https://rebeccahermanfostering.com/thumbnail.png"],

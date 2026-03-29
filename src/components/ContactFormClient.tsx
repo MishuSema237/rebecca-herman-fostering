@@ -153,7 +153,7 @@ export function ContactFormClient() {
                             <div className="bg-white rounded-3xl p-8 shadow-lg">
                                 <h3 className="text-xl font-black text-brand-forest-900 uppercase mb-6">Contact Info</h3>
                                 <div className="space-y-4">
-                                    <a href="mailto:rebecca@thecavaliercommunity.com" className="flex items-center gap-4 text-brand-forest-600 hover:text-brand-orange-600 transition-colors">
+                                    <a href="mailto:admin@rebeccahermanfostering.com" className="flex items-center gap-4 text-brand-forest-600 hover:text-brand-orange-600 transition-colors">
                                         <div className="w-12 h-12 bg-brand-orange-100 rounded-2xl flex items-center justify-center">
                                             <Mail className="w-5 h-5 text-brand-orange-600" />
                                         </div>

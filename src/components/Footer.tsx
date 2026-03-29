@@ -36,7 +36,7 @@ export function Footer() {
                             <div className="relative w-48 h-16">
                                 <Image 
                                     src="/assets/RebeccaHermanFosteringLogo.png" 
-                                    alt="Rebecca Herman's Fostering"
+                                    alt="Cavalier King Charles Rehoming Center"
                                     fill
                                     className="object-contain"
                                 />
@@ -52,7 +52,7 @@ export function Footer() {
                         <h4 className="text-xs font-black uppercase tracking-[0.2em] mb-6 text-brand-orange-500">Quick Links</h4>
                         <ul className="space-y-3">
                             <li><Link href="/" className="text-white/70 hover:text-brand-orange-500 transition-colors font-medium">Home</Link></li>
-                            <li><Link href="/about" className="text-white/70 hover:text-brand-orange-500 transition-colors font-medium">About Rebecca</Link></li>
+                            <li><Link href="/about" className="text-white/70 hover:text-brand-orange-500 transition-colors font-medium">About Us</Link></li>
                             <li><Link href="/puppies" className="text-white/70 hover:text-brand-orange-500 transition-colors font-medium">Available Cavaliers</Link></li>
                             <li><Link href="/contact" className="text-white/70 hover:text-brand-orange-500 transition-colors font-medium">Contact</Link></li>
                         </ul>
@@ -93,7 +93,7 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/10">
                     <p className="text-center text-xs font-medium text-white/50">
-                        &copy; {new Date().getFullYear()} Rebecca Herman's Fostering. All rights reserved.
+                        &copy; {new Date().getFullYear()} Cavalier King Charles Rehoming Center. All rights reserved.
                     </p>
                 </div>
             </div>

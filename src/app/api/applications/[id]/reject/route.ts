@@ -22,8 +22,8 @@ export async function POST(request: Request, { params }: RouteParams) {
 
         await sendMail({
             to: app.email,
-            subject: `Update on Your Application - ${app.puppyName || "Cavalier"} | Rebecca Herman`,
-            text: `Dear ${app.applicantName},\n\nThank you for your interest in adopting from Rebecca Herman's Fostering. After careful consideration, we're unable to move forward with your application at this time.\n\nWe wish you the best in your search for the perfect companion.\n\nWarm regards,\nRebecca Herman`,
+            subject: `Update on Your Application - ${app.puppyName || "Cavalier"} | Cavalier King Charles Rehoming Center`,
+            text: `Dear ${app.applicantName},\n\nThank you for your interest in adopting from Cavalier King Charles Rehoming Center. After careful consideration, we're unable to move forward with your application at this time.\n\nWe wish you the best in your search for the perfect companion.\n\nWarm regards,\nCavalier King Charles Rehoming Center`,
             html: getEmailTemplate("application_rejected", {
                 name: app.applicantName,
                 puppyName: app.puppyName,

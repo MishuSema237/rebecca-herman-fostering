@@ -14,8 +14,8 @@ import NannyImage from "@/models/NannyImage";
 import { seoConfig, generatePageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = generatePageMetadata({
-    title: "Cavalier King Charles Spaniel Puppies for Adoption | Rebecca Herman's Fostering",
-    description: "Find your perfect Cavalier King Charles Spaniel puppy at Rebecca Herman's Fostering. Responsible adoption, health-guaranteed puppies raised with love. Browse available Cavalier puppies today!",
+    title: "Cavalier King Charles Spaniel Puppies for Adoption | Cavalier King Charles Rehoming Center",
+    description: "Find your perfect Cavalier King Charles Spaniel puppy at Cavalier King Charles Rehoming Center. Responsible adoption, health-guaranteed puppies raised with love. Browse available Cavalier puppies today!",
 });
 
 export const revalidate = 0;
@@ -182,7 +182,7 @@ export default async function Home() {
         </section>
       )}
 
-      {/* About Rebecca Section */}
+      {/* About Us Section */}
       <section className="py-24 bg-brand-forest-900 text-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-orange-700/10 rounded-full -mr-40 -mt-40 blur-3xl" />
@@ -197,19 +197,19 @@ export default async function Home() {
               </h2>
               <div className="space-y-4 text-white/70">
                 <p className="text-lg leading-relaxed">
-                  I'm Rebecca Herman, a 34-year-old wife, mother of four, and passionate dog lover. My connection with dogs—especially Cavalier King Charles Spaniels—began in childhood.
+                  We are a dedicated team passionate about finding loving forever homes for Cavalier King Charles Spaniels. Our mission is to ensure every Cavalier finds their perfect family.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Although my early experiences weren't ideal, they shaped a deep personal promise within me: to always love, protect, and advocate for dogs, and to support anyone who shares that same compassion.
+                  With years of experience in Cavalier rehoming, we understand the unique needs of this wonderful breed and work tirelessly to match puppies with the right families.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Over the years, I became increasingly aware of the heartbreaking number of dogs in shelters, often surrendered for reasons beyond their control. Seeing this inspired me to take action and make a difference.
+                  Every Cavalier in our care receives the highest quality of love, care, and attention. We conduct thorough assessments to ensure successful adoptions.
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link href="/about" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-orange-700 text-white font-black uppercase tracking-wider rounded-full hover:bg-brand-orange-800 transition-all">
-                  Read My Full Story
+                  Learn More About Us
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-bold uppercase tracking-wider rounded-full hover:bg-white/10 transition-all">
@@ -222,7 +222,7 @@ export default async function Home() {
               <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
                 <Image 
                   src="/assets/rebeccaFamily/rebeccawithahappyfamillyandanoldlady.jpg" 
-                  alt="Rebecca Herman"
+                  alt="Cavalier King Charles Rehoming Center"
                   fill
                   className="object-cover"
                 />
@@ -242,7 +242,7 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-4">
-              Why Choose <span className="text-brand-orange-500">Rebecca</span>
+              Why Choose <span className="text-brand-orange-500">Us</span>
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto">Because your new family member deserves the best start in life.</p>
           </div>
@@ -250,7 +250,7 @@ export default async function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { icon: ShieldCheck, title: "Health Guaranteed", desc: "Every Cavalier comes with a full health guarantee and up-to-date vaccinations." },
-              { icon: Heart, title: "Personal Matching", desc: "I take the time to understand your family to find the perfect personality match." },
+              { icon: Heart, title: "Personal Matching", desc: "We take the time to understand your family to find the perfect personality match." },
               { icon: Truck, title: "Safe Transport", desc: "Your Cavalier travels safely with professional pet transport to your doorstep." }
             ].map((item, i) => (
               <div key={i} className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all">
@@ -416,8 +416,8 @@ export default async function Home() {
             <br /><span className="text-brand-orange-600">Perfect Cavalier?</span>
           </h2>
           <p className="text-xl text-brand-forest-600 mb-10 max-w-2xl mx-auto">
-            "Finding the perfect home for every puppy is not just my job, it's my promise to every family I work with."
-            <br /><span className="font-black text-brand-orange-700">— Rebecca Herman</span>
+            "Finding the perfect home for every puppy is not just our mission, it's our promise to every family we work with."
+            <br /><span className="font-black text-brand-orange-700">— The Team</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -430,7 +430,7 @@ export default async function Home() {
               href="/contact"
               className="inline-flex items-center justify-center gap-2 px-10 py-5 border-2 border-brand-forest-900 text-brand-forest-900 font-black uppercase tracking-wider rounded-full hover:bg-brand-forest-900 hover:text-white transition-all"
             >
-              Contact Rebecca
+              Contact Us
             </Link>
           </div>
         </div>
