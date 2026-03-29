@@ -185,14 +185,33 @@ export default async function Home() {
       {/* About Us Section */}
       <section className="py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-forest-900/60 via-brand-forest-900/85 to-brand-forest-900/95" />
           <Image 
             src="/thumbnail.png" 
             alt="Cavalier King Charles Rehoming Center"
             fill
-            className="object-cover"
+            className="object-cover opacity-80 scale-90"
           />
-          <div className="absolute inset-0 bg-brand-forest-900/90" />
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-orange-700/10 rounded-full -mr-40 -mt-40 blur-3xl" />
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-20 left-[10%] opacity-20">
+              <Bone className="w-12 h-12 text-white" />
+            </div>
+            <div className="absolute top-40 right-[15%] opacity-20">
+              <PawPrint className="w-16 h-16 text-white" />
+            </div>
+            <div className="absolute bottom-32 left-[20%] opacity-20">
+              <Bone className="w-10 h-10 text-white" />
+            </div>
+            <div className="absolute bottom-20 right-[25%] opacity-20">
+              <PawPrint className="w-14 h-14 text-white" />
+            </div>
+            <div className="absolute top-1/3 left-[30%] opacity-15">
+              <Bone className="w-8 h-8 text-white" />
+            </div>
+            <div className="absolute bottom-1/3 right-[35%] opacity-15">
+              <PawPrint className="w-10 h-10 text-white" />
+            </div>
+          </div>
         </div>
         
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
