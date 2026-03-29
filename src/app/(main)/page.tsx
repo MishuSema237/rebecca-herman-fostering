@@ -193,8 +193,8 @@ export default async function Home() {
             className="object-cover"
             priority
           />
-          {/* Linear overlay - 90% on left, 60% on right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-forest-900/90 via-brand-forest-900/80 to-brand-forest-900/60" />
+          {/* Linear overlay - 90% on left, 70% center, 90% on right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-forest-900/90 via-brand-forest-900/70 to-brand-forest-900/90" />
         </div>
         
         {/* Background decorative elements */}
