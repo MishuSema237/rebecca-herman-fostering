@@ -183,8 +183,15 @@ export default async function Home() {
       )}
 
       {/* About Us Section */}
-      <section className="py-24 bg-brand-forest-900 text-white relative overflow-hidden">
+      <section className="py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0">
+          <Image 
+            src="/thumbnail.png" 
+            alt="Cavalier King Charles Rehoming Center"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-brand-forest-900/90" />
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-orange-700/10 rounded-full -mr-40 -mt-40 blur-3xl" />
         </div>
         
@@ -215,17 +222,6 @@ export default async function Home() {
                 <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-bold uppercase tracking-wider rounded-full hover:bg-white/10 transition-all">
                   Get in Touch
                 </Link>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
-                <Image 
-                  src="/thumbnail.png" 
-                  alt="Cavalier King Charles Rehoming Center"
-                  fill
-                  className="object-cover"
-                />
               </div>
             </div>
           </div>
