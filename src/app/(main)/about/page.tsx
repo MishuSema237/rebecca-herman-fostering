@@ -44,8 +44,8 @@ export default function AboutPage() {
                             <div className="relative">
                                 <div className="aspect-[4/5] rounded-[3rem] bg-gradient-to-br from-brand-forest-100 to-brand-orange-100 overflow-hidden shadow-2xl">
                                     <Image 
-                                        src="/assets/rebeccaFamily/rebeccawithahappyfamillyandanoldlady.jpg"
-                                        alt="Rebecca Herman"
+                                        src="/assets/cavalierKingCharlesAboutBreedImages/image1.jpg"
+                                        alt="Cavalier King Charles Rehoming Center"
                                         fill
                                         className="object-cover"
                                         priority

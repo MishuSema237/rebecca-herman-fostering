@@ -35,7 +35,7 @@ export function Footer() {
                         <Link href="/" className="inline-block mb-6">
                             <div className="relative w-48 h-16">
                                 <Image 
-                                    src="/assets/RebeccaHermanFosteringLogo.png" 
+                                    src="/assets/CavalierKingCharlesRehomingCenterLogo.png" 
                                     alt="Cavalier King Charles Rehoming Center"
                                     fill
                                     className="object-contain"
