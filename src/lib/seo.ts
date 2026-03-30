@@ -57,7 +57,7 @@ export const seoConfig = {
     socialImage: `${siteUrl}/thumbnail.png`,
     twitterHandle: "@CKCRehoming",
     phone: "+1 (504) 358-1381",
-    email: "admin@rebeccahermanfostering.com",
+    email: "admin@cavalierkingcharlesrehomingcenter.com",
 };
 
 export function generatePageMetadata({
