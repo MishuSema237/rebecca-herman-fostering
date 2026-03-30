@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const siteUrl = process.env.NEXT_PUBLIC_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://rebeccahermanfostering.com";
+const siteUrl = process.env.NEXT_PUBLIC_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://cavalierkingcharlesrehomingcenter.com";
 
 export const seoConfig = {
     siteName: "Cavalier King Charles Rehoming Center",

@@ -49,7 +49,7 @@ export function getEmailTemplate(type: "application_submitted" | "application_ap
     const brandColor = "#c45210";
     const brandColorLight = "#fde4d0";
     const logoText = "Cavalier King Charles Rehoming Center";
-    const logoUrl = "https://rebeccahermanfostering.com/CRCRehomingCenterLogo.png";
+    const logoUrl = "https://cavalierkingcharlesrehomingcenter.com/CRCRehomingCenterLogo.png";
 
     let headerContent = "";
     let mainContent = "";
