@@ -52,20 +52,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  if (!process.env.MONGODB_URI) {
+    console.error("MONGODB_URI not set");
+    return staticPages;
+  }
+
   try {
     const { MongoClient } = await import("mongodb");
     
-    const client = new MongoClient(process.env.MONGODB_URI!);
+    const client = new MongoClient(process.env.MONGODB_URI);
     await client.connect();
     const db = client.db();
     
     const puppies = await db.collection("puppies").find({ 
       status: { $ne: "adopted" }
-    }).project({ _id: 1, updatedAt: 1 }).limit(1000).toArray();
+    }).limit(1000).toArray();
 
     await client.close();
 
-    const puppyPages: MetadataRoute.Sitemap = puppies.map((puppy) => ({
+    const puppyPages: MetadataRoute.Sitemap = puppies.map((puppy: any) => ({
       url: `${baseUrl}/puppies/${puppy._id}`,
       lastModified: puppy.updatedAt ? new Date(puppy.updatedAt) : now,
       changeFrequency: "daily" as const,
@@ -73,7 +78,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }));
 
     return [...staticPages, ...puppyPages];
-  } catch {
+  } catch (e) {
+    console.error("Sitemap generation error:", e);
     return staticPages;
   }
 }
