@@ -8,6 +8,50 @@ const inter = Inter({ subsets: ["latin"] });
 
 const siteUrl = "https://cavalierkingcharlesrehomingcenter.com";
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": seoConfig.siteName,
+  "description": seoConfig.description,
+  "url": siteUrl,
+  "telephone": seoConfig.phone,
+  "email": seoConfig.email,
+  "priceRange": "$$",
+  "serviceType": ["Dog Adoption", "Pet Rehoming"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "areaServed": "United States",
+  "sameAs": [
+    "https://www.facebook.com/CavalierKingCharlesRehomingCenter"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": seoConfig.siteName,
+  "url": siteUrl,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": `${siteUrl}/puppies?q={search_term_string}`,
+    "query-input": "required name=search_term_string"
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": siteUrl
+    }
+  ]
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -86,6 +130,18 @@ export default function RootLayout({
       <body className={`${inter.className} bg-white text-gray-900`}>
         <Toaster position="top-right" />
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
         <script dangerouslySetInnerHTML={{
           __html: `
             var _smartsupp = _smartsupp || {};

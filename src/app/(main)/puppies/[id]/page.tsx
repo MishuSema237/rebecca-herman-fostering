@@ -3,11 +3,13 @@ import { Metadata } from "next";
 import dbConnect from "@/lib/db";
 import Puppy from "@/models/Puppy";
 import { PuppyDetailsClient } from "@/components/PuppyDetailsClient";
-import { generatePuppyMetadata } from "@/lib/seo";
+import { generatePuppyMetadata, seoConfig } from "@/lib/seo";
 
 type Props = {
     params: Promise<{ id: string }>
 }
+
+const siteUrl = "https://cavalierkingcharlesrehomingcenter.com";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { id } = await params;
@@ -41,6 +43,7 @@ export default async function PuppyPage({ params }: Props) {
 
     let puppy: any = null;
     let relatedPuppies: any[] = [];
+    let productSchema: any = null;
 
     try {
         const doc = await Puppy.findById(id).lean();
@@ -53,6 +56,31 @@ export default async function PuppyPage({ params }: Props) {
                 fee: p.fee || "Contact us",
                 nannyFee: p.nannyFee || "Contact us",
             };
+
+            if (p.image) {
+                productSchema = {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": `${p.name || "Cavalier Puppy"} - ${p.breed || "Cavalier King Charles Spaniel"}`,
+                    "description": p.description || `Meet ${p.name || "this adorable Cavalier King Charles Spaniel"} looking for a loving forever home.`,
+                    "image": p.image,
+                    "url": `${siteUrl}/puppies/${id}`,
+                    "brand": {
+                        "@type": "Brand",
+                        "name": seoConfig.siteName
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "price": p.fee || "0",
+                        "priceCurrency": "USD",
+                        "availability": p.status === "available" ? "https://schema.org/InStock" : "https://schema.org/SoldOut",
+                        "seller": {
+                            "@type": "Organization",
+                            "name": seoConfig.siteName
+                        }
+                    }
+                };
+            }
 
             const relatedRaw = await Puppy.find({
                 _id: { $ne: doc._id },
@@ -88,5 +116,15 @@ export default async function PuppyPage({ params }: Props) {
         notFound();
     }
 
-    return <PuppyDetailsClient puppy={puppy} relatedPuppies={relatedPuppies} />;
+    return (
+        <>
+            {productSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+                />
+            )}
+            <PuppyDetailsClient puppy={puppy} relatedPuppies={relatedPuppies} />
+        </>
+    );
 }

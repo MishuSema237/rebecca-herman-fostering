@@ -130,10 +130,11 @@ export function generatePuppyMetadata({
     puppyImage: string;
     puppyId: string;
 }): Metadata {
-    const title = `${puppyName} - ${puppyBreed} Puppy for Adoption`;
+    const title = `${puppyName} - ${puppyBreed} Puppy for Adoption | ${seoConfig.siteName}`;
+    const truncatedDesc = puppyDescription ? puppyDescription.substring(0, 120) : "";
     const description = puppyDescription 
-        ? `${puppyName} is a ${puppyAge} ${puppyBreed} puppy available for adoption. ${puppyDescription.substring(0, 150)}...`
-        : `Meet ${puppyName}, a adorable ${puppyAge} ${puppyBreed} puppy looking for a loving forever home. Apply now to adopt!`;
+        ? `${puppyName} is a ${puppyAge} ${puppyBreed} available for adoption. ${truncatedDesc}. Health guaranteed. Apply today to welcome this Cavalier into your family!`
+        : `Meet ${puppyName}, a adorable ${puppyAge} ${puppyBreed} looking for a loving forever home. Health guaranteed Cavalier adoption. Contact us to schedule a meeting!`;
     
     return generatePageMetadata({
         title,
