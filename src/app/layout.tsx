@@ -6,9 +6,11 @@ import { seoConfig } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const siteUrl = "https://cavalierkingcharlesrehomingcenter.com";
+
 
 export const metadata: Metadata = {
-  metadataBase: new URL(seoConfig.socialImage.replace("/thumbnail.png", "")),
+  metadataBase: new URL(siteUrl),
 
   title: {
     default: seoConfig.siteName,
@@ -36,12 +38,15 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: seoConfig.socialImage.replace("/thumbnail.png", ""),
+    canonical: siteUrl,
+    languages: {
+      "en-US": siteUrl,
+    },
   },
 
   openGraph: {
     type: "website",
-    url: seoConfig.socialImage.replace("/thumbnail.png", ""),
+    url: siteUrl,
     title: seoConfig.siteName,
     description: seoConfig.description,
     siteName: seoConfig.siteName,
