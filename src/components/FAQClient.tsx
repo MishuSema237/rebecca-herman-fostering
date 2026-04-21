@@ -16,12 +16,12 @@ export function FAQClient({ faqItems }: { faqItems: FAQItem[] }) {
     return (
         <>
             {/* Header */}
-            <section className="pt-32 pb-16 bg-gradient-to-b from-brand-forest-900 to-brand-forest-950">
+            <section className="pt-32 pb-16 bg-brand-forest-900">
                 <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl sm:text-5xl font-black text-white uppercase mb-4">
                         Frequently Asked Questions
                     </h1>
-                    <p className="text-xl text-brand-forest-200 max-w-2xl mx-auto">
+                    <p className="text-xl text-white/80 max-w-2xl mx-auto">
                         Find answers to common questions about adopting a Cavalier King Charles Spaniel
                     </p>
                 </div>
