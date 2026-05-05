@@ -90,13 +90,15 @@ export function FamilyCarousel() {
                             <button
                                 key={idx}
                                 onClick={() => setCurrentIndex(idx)}
-                                className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${
+                                className={`min-w-[32px] min-h-[32px] md:min-w-3 md:min-h-3 p-2 md:p-0 rounded-full transition-all flex items-center justify-center ${
                                     idx === currentIndex 
                                         ? "bg-brand-orange-600 w-6 md:w-8" 
                                         : "bg-brand-orange-300 hover:bg-brand-orange-400"
                                 }`}
                                 aria-label={`Go to image ${idx + 1}`}
-                            />
+                            >
+                                <span className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full ${idx === currentIndex ? "bg-white" : "bg-brand-orange-600"}`} />
+                            </button>
                         ))}
                     </div>
                 </div>

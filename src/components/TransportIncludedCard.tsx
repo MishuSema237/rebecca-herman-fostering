@@ -95,13 +95,15 @@ export function TransportIncludedCard({ images }: TransportIncludedCardProps) {
                             <button
                                 key={idx}
                                 onClick={() => setCurrentImageIndex(idx)}
-                                className={`w-2 h-2 rounded-full transition-all ${
+                                className={`min-w-[32px] min-h-[32px] p-2 rounded-full transition-all flex items-center justify-center ${
                                     idx === currentImageIndex 
                                         ? "bg-brand-orange-500 w-4" 
                                         : "bg-white/30 hover:bg-white/50"
                                 }`}
                                 aria-label={`Go to image ${idx + 1}`}
-                            />
+                            >
+                                <span className={`w-1.5 h-1.5 rounded-full ${idx === currentImageIndex ? "bg-white" : "bg-brand-orange-500"}`} />
+                            </button>
                         ))}
                     </div>
                 )}
