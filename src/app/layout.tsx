@@ -111,9 +111,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
+    site: "@CKCRehoming",
+    creator: seoConfig.twitterHandle,
     title: seoConfig.siteName,
     description: seoConfig.description,
-    creator: seoConfig.twitterHandle,
     images: [seoConfig.socialImage],
   },
 

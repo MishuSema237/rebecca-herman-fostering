@@ -7,7 +7,7 @@ export const seoConfig = {
     siteNameShort: "CKC Rehoming Center",
     ownerName: "Cavalier King Charles Rehoming Center",
     tagline: "Finding Loving Forever Homes for Cavalier King Charles Spaniels",
-    description: "Cavalier King Charles Rehoming Center - Trusted rehoming service for Cavalier King Charles Spaniels. We connect loving families with healthy, vet-checked Cavalier puppies. Responsible adoption with health guarantees.",
+    description: "Trusted Cavalier King Charles Spaniel rehoming. Healthy, vet-checked puppies with health guarantees. Find your perfect Cavalier companion today!",
     keywords: [
         // Full name variations
         "Cavalier King Charles Rehoming Center",
